@@ -66,3 +66,9 @@ C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\obj\Debug\net6.0\refint\M
 C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\obj\Debug\net6.0\MyJwtProject.pdb
 C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\obj\Debug\net6.0\MyJwtProject.genruntimeconfig.cache
 C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\obj\Debug\net6.0\ref\MyJwtProject.dll
+C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\bin\Debug\net6.0\MediatR.dll
+C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Furkan\source\repos\MyJwtProject\MyJwtProject\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

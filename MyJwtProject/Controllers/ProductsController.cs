@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyJwtProject.Core.Application.Features.Commands;
 using MyJwtProject.Core.Application.Features.Queries;
 
 namespace MyJwtProject.Controllers
@@ -27,6 +28,12 @@ namespace MyJwtProject.Controllers
 		{
 			var result = await this.mediator.Send(new GetProductQueryRequest(id));
 			return result != null ? Ok(result) : NotFound();
+		}
+		[HttpDelete("{id}")]
+		public async Task<IActionResult> Delete (int id)
+		{
+			 await this.mediator.Send(new DeleteProductCommandRequest(id));
+			return NoContent();
 		}
 	}
 }

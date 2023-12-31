@@ -41,5 +41,11 @@ namespace MyJwtProject.Controllers
 			await this.mediator.Send(request);
 			return Created("",request);
 		}
+		[HttpPut]
+		public async Task<IActionResult> Update(UpdateProductCommandRequest request)
+		{
+			await this.mediator.Send(request);
+			return NoContent();
+		}
 	}
 }

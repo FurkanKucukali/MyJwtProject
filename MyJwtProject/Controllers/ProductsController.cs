@@ -35,5 +35,11 @@ namespace MyJwtProject.Controllers
 			 await this.mediator.Send(new DeleteProductCommandRequest(id));
 			return NoContent();
 		}
+		[HttpPost]
+		public async Task<IActionResult> Create(CreateProductCommandRequest request)
+		{
+			await this.mediator.Send(request);
+			return Created("",request);
+		}
 	}
 }

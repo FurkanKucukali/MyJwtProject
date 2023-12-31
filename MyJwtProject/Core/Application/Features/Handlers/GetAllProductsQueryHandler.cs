@@ -12,10 +12,10 @@ namespace MyJwtProject.Core.Application.Features.Handlers
 		private readonly IRepository<Product> repository;
 		private readonly IMapper mapper;
 
-		public GetAllProductsQueryHandler(IRepository<Product> repository, IMapper mapper)
+		public GetAllProductsQueryHandler(IMapper mapper, IRepository<Product> repository)
 		{
-			this.repository = repository;
 			this.mapper = mapper;
+			this.repository = repository;
 		}
 
 		public async Task<List<ProductListDto>> Handle(GetAllProductsQueryRequest request, CancellationToken cancellationToken)

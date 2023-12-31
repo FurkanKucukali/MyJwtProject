@@ -18,8 +18,15 @@ namespace MyJwtProject.Controllers
 		[HttpGet]
 		public async Task<IActionResult> List()
 		{
+
 			var result = await this.mediator.Send(new GetAllProductsQueryRequest());
 			return Ok(result);
+		}
+		[HttpGet("{id}")]
+		public async Task<IActionResult> Get(int id)
+		{
+			var result = await this.mediator.Send(new GetProductQueryRequest(id));
+			return result != null ? Ok(result) : NotFound();
 		}
 	}
 }

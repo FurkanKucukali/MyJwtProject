@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyJwtProject.Core.Application.Features.Commands;
+using MyJwtProject.Core.Application.Features.Queries;
 
 namespace MyJwtProject.Controllers
 {
@@ -21,6 +22,19 @@ namespace MyJwtProject.Controllers
 		{
 			await this.mediator.Send(request);
 			return Created("",request);
+		}
+		[HttpPost("[action]")]
+		public async Task<IActionResult> Login(CheckUserQueryRequest request)
+		{
+			var dto = await this.mediator.Send(request);
+			if(dto.IsExist)
+			{
+				return Created("", "token olustur");
+			}
+			else
+			{
+				return BadRequest("Kullanici adi veya şifre hatali");
+			}
 		}
 	}
 }

@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyJwtProject.Core.Application.Features.Commands;
 using MyJwtProject.Core.Application.Features.Queries;
+using MyJwtProject.Infrastracture.Tools;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace MyJwtProject.Controllers
 {
@@ -29,7 +31,8 @@ namespace MyJwtProject.Controllers
 			var dto = await this.mediator.Send(request);
 			if(dto.IsExist)
 			{
-				return Created("", "token olustur");
+				return Created("", JwtTokenGenerator.GenerateToken(dto));
+
 			}
 			else
 			{

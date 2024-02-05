@@ -32,7 +32,7 @@ namespace MyJwtProject.Core.Application.Features.Handlers
                 dto.Id = user.Id;
                 dto.IsExist = true;
                 var role = await this.roleRepository.GetByFilterAsync(x => x.Id == user.AppRoleId);
-                dto.Role = role.Definition;
+                dto.Role = role?.Definition;
 
             }
             return dto;

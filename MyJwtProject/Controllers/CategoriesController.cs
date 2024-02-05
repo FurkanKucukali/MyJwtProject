@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyJwtProject.Core.Application.Features.Commands;
 using MyJwtProject.Core.Application.Features.Handlers;
@@ -6,6 +7,7 @@ using MyJwtProject.Core.Application.Features.Queries;
 
 namespace MyJwtProject.Controllers
 {
+	[Authorize(Roles = "Admin,Member")]
 	[Route("api/[controller]")]
 	[ApiController]
 	public class CategoriesController:ControllerBase
